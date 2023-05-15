@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="mt-5">
+        <div class="text-center">
+
+            <img src="{% static 'core/images/myself.jpg' %}" alt="ProfilePic" class="img-thumbnail" width="250px"
+                 height="150px">
+        </div>
+        <div class="mt-5 text-black mx-5 text-justify">
+            <h1 class="font-weight-bold st-font">Hello, </h1>
+            <div class="px-4" style="line-height: 2rem;">
+                <p style="text-indent: 100px;">I am <b class="text-black">Mr.Krishna Sudhamusu R</b> having 3 years
+                    experience as Program Analyst at <b class="text-warning">Cognizant Technologies,India. </b>
+
+                </p>
+                <p>I worked as <b class="text-warning">SAP Basis Consultant</b> where I was responsible for Database Backup Monitoring and Scheduling,Transport Management,System Refresh Activities,Performing Kernel Updates,System and database restart during planned outages and other major administration tasks.I am trained and have significant knowledge in <b class="text-warning">SAP SD Functional</b> Module as well.
+                    </p>
+                <p>I am an artistic person.
+
+I always enjoyed creating meaningful and impact ful experience for audience through my art form,be it dance,photography or animation.
+I always wanted to do something creative in my professional life and just wasn't sure what exactly it is .
+                    After a lot of careful consideration and exploration of several domains like <b class="text-warning">web development,</b> Front end development, I found <b class="text-warning">UX/UI design </b>very fascinating .
+Quickly I started gathering Information about UI design and did courses for UX/UI design in Udemy, Coursera .  I devoted all my free time to learn everything I could and eventually started to make wireframes and website design for a photography team. The feedback has been very encouraging.
+                    I am seeking to leverage my learning and passion towards a career as a <b class="text-warning">UX/UI designer</b>. If given an opportunity, I am willing to put in all my efforts to deliver the best and prove myself in a short time.    </p>
+                <br>
+
+
+            </div>
+            <h1 class="font-weight-bold st-font">My Objective :</h1>
+            <div class="px-4" style="line-height: 2rem;">
+                <p>To work in a responsibility driven and result-oriented environment, that enables me to
+                    learn, grow and contribute to the success of the organization.</p>
+            </div>
+
+        </div>
+        <div class="text-center">
+            <a href="{% url 'contact' %}" class="btn btn-outline-warning my-3 mr-5">Hire Me</a>
+
+        </div>
+    </div>
+{% endblock %}

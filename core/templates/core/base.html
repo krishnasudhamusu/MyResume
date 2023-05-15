@@ -1,0 +1,63 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'core/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    {% block corecss %}
+        <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock %}
+</head>
+<body>
+<header class="l-header">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="#" class="nav__logo">Krishna Sudhamusu</a>
+        </div>
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                <li class="nav__item"><a href="{% url 'home' %}" class="nav__link {{ home }}">About Me</a></li>
+                <li class="nav__item"><a href="{% url 'projects' %}" class="nav__link {{ project }}">Projects</a></li>
+                <li class="nav__item"><a href="{% url 'skills' %}" class="nav__link {{ skill }}">Skills</a></li>
+                <li class="nav__item"><a href="{% url 'assets' %}" class="nav__link {{ asset }}">Assets</a></li>
+                <li class="nav__item"><a href="{% url 'academics' %}" class="nav__link {{ academic }}">Academics</a>
+                </li>
+                <li class="nav__item"><a href="{% url 'contact' %}" class="nav__link {{ contact }}">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+</header>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-2">
+            {% include 'core/sidebar.html' %}
+
+        </div>
+        <div class="col-sm-10">
+            {% block content %}{% endblock %}
+
+        </div>
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<script src="{% static 'core/js/jquery.js' %}"></script>
+<script src="{% static 'core/js/popper.js' %}"></script>
+<script src="{% static 'core/js/all.min.js' %}"></script>
+<script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

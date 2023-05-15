@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+
+    align-items: center;
+    justify-content: center;
+}
+
+li.main-one {
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    list-style: none;
+    letter-spacing: 2.5px;
+
+}
+li:not(:last-child) {
+    margin-bottom: 20px;
+
+}
+
+li:before {
+    content: "\261E";
+    color: #ffc107;
+    margin-right: 15px;
+
+}
+
+
+.side-one {
+    color: white;
+    list-style: none;
+    margin-bottom: 20px;
+    letter-spacing: 2.5px;
+     font-size: 14px;
+
+
+}
+
+
+
+.side-one:before {
+    content: "\27A3";
+}

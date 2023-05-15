@@ -1,0 +1,69 @@
+{% extends 'core/base.html' %}
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="section-title" >Contact  Me</h1>
+        <div class="row text-white mb-5">
+            <p class="mx-auto mb-5">
+                If you like my work . Please Contact me to hire me .        
+            </p>
+            <div class="col-sm-9 mb-5">
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Your Name</label>
+                            <input type="text" placeholder="Enter Your Name" class="form-control" id="inputName" name="name"/>
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail">Your Email </label>
+                            <input type="email" placeholder="Enter Your Email" class="form-control" id="inputEmail" name="email" required/>
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <label for="inputSubject">Your Subject</label>
+                        <input type="text" placeholder="Enter Your Subject" class="form-control" id="inputSubject" name="subject"/>
+
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTextarea">Your Message </label>
+                        <textarea class="form-control" placeholder="Enter Your Text" id="inputTextarea" name="message" required></textarea>
+
+                    </div>
+                    <button class="btn btn-primary" type="submit">Send</button>
+
+                </form>
+
+            </div>
+            <div class="col-sm-3 text-center">
+                <ul class="list-unstyled">
+                    <li>
+                        <i class="fas fa-map-marker-alt fa-2x i-color">
+
+                        </i>
+                        <p>Hyderabad , Telangana , India</p>
+
+
+                    </li>
+                    <li>
+                        <i class="fas fa-phone mt-4 fa-2x i-color"></i>
+                        <p>+91 9597850477</p>
+
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope mt-4 fa-2x i-color"></i>
+                        <p>krishnasudhamusu@gmail.com</p>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center">
+
+    <a href="https://github.com/krishnasudhamusu" target="_blank"><i class="fab fa-github i-color mr-3"></i></a>
+
+    </div>
+{% endblock %}
